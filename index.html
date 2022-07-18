@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Dias Faltantes</title>
+</head>
+<body>
+    <div id="app">
+        <div class="form">
+            <form action="">
+                <label for="correo">Correo: </label>
+                <input type="email" name="correo "placeholder="Introduzca su correo" id="eventMail">
+                <label for="fecha">Día que compró: </label>
+                <input type="datetime-local" id="eventDate">
+                <input type="button" id="bAdd" value="Añadir correo">
+            </form>
+        </div>
+
+        <div id="eventsContainer"></div>
+    </div>
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
