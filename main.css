@@ -249,7 +249,8 @@ input[type="button"] {
     }
 
     #mail {
-        margin: 0 5px;
+        margin: 0;
+        width: 200px;
     }
 
     .accounts-container {
