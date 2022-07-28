@@ -218,7 +218,7 @@ input[type="button"] {
     padding: 10px;
 }
 
-@media (max-width: 415px) {
+@media (max-width: 432px) {
 
     body {
         overflow-x: hidden;
@@ -250,7 +250,6 @@ input[type="button"] {
 
     #mail {
         margin: 0;
-        width: 200px;
     }
 
     .accounts-container {
@@ -343,6 +342,12 @@ input[type="button"] {
 
     .bDelete {
         padding: 6px;
+    }
+}
+
+@media (max-width: 415px) {
+    #mail {
+        width: 200px;
     }
 }
 
