@@ -6,18 +6,123 @@
     padding: 0;
 }
 
+#signup-response {
+    display: none;
+    width: 40%;
+    border-radius: 10px;
+    font-size: 20px;
+    top: 10px;
+    left: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 15px;
+    background-color: #00ff37fb;
+    margin-top: 20px;
+    position: absolute;
+    opacity: 0.9;
+
+    animation: signup-response 0.5s 1;
+    -webkit-animation: signup-response 0.5s 1;
+    animation-fill-mode: forwards;
+
+    animation-delay: 2s;
+    -webkit-animation-delay: 1s;
+    /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+
+}
+
+@keyframes signup-response {
+    from {
+        opacity: 0.5;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes signup-response {
+    from {
+        opacity: 0.5;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
 body {
     font-family: Inter, Arial, sans-serif;
+    font-size: 1rem;
     background-color: pink;
+    height: 100vh;
+}
+
+#app {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.form-action {
+    background-color: white;
+    padding: 15px;
+    width: 30%;
+    margin: 25px auto;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 550px;
+    min-width: 500px;
 }
 
 .form {
-    background-color: white;
-    padding: 10px 20px 20px 20px;
-    width: 820px;
-    margin: 50px auto;
-    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+    max-width: 600px;
     text-align: center;
+    margin: 10px 50px;
+}
+
+form #buttonAdd {
+    margin-left: 10px;
+}
+
+.accounts-container {
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-main-accounts {
+    border-bottom: 2px solid #ccc;
+    padding: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-main-accounts p {
+    display: inline-block;
+}
+
+#eventDate {
+    width: 30%;
+    margin: 0 15px;
+}
+
+#mail {
+    font-family: Inter, sans-serif;
+    font-weight: bold;
+    margin: 0 10px;
+    padding: 5px;
 }
 
 label {
@@ -25,6 +130,7 @@ label {
 }
 
 button {
+    font-family: Inter, Arial, sans-serif;
     border: none;
     background-color: red;
     padding: 8px;
@@ -34,8 +140,6 @@ button {
 
 .form input {
     font-family: Inter, Arial, sans-serif;
-    font-weight: bold;
-    margin: 5px 8px;
     padding: 5px;
     display: inline-block;
     box-sizing: border-box;
@@ -43,36 +147,36 @@ button {
 }
 
 input[type="button"] {
+    font-family: Inter, Arial, sans-serif;
     border: none;
     background-color: #1860a8;
     color: white;
     padding: 10px;
     border-radius: 5px;
-    margin-top: 20px;
+    margin-left: 10px;
 }
 
 #eventsContainer {
     background-color: white;
     border-radius: 10px;
     padding: 10px;
-    width: 600px;
-    margin: 100px auto;
     display: flex;
     flex-direction: column;
     gap: 5px;
+    min-width: 582px;
 }
 
 .event {
     border-bottom: 2px solid #ccc;
-    padding: 10px;
+    padding: 5px 10px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.event .days .minutes {
+.event .days {
     text-align: center;
-    width: 100px;
+    width: 50px;
 }
 
 .event .days .days-number {
@@ -88,11 +192,6 @@ input[type="button"] {
     margin: 0 10px 0 3px;
 }
 
-.minutes-text {
-    text-align: center;
-    margin-left: 7px;
-}
-
 .timer-part {
     font-size: 30px;
     font-weight: bold;
@@ -101,15 +200,153 @@ input[type="button"] {
 }
 
 .event .event-mail {
+    padding: 0 7px;
+    width: 270px;
+}
+
+#eventMail {
     padding: 10px;
     width: 270px;
 }
 
-.event .event-date {
-    padding: 10px;
-    width: 120px;
+.event-date {
+    width: 110px;
+    margin: 0 10px;
 }
 
 .event .actions {
     padding: 10px;
+}
+
+@media (max-width: 415px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    #app {
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+    }
+
+    .form {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .form-action {
+        padding: 15px 0;
+        display: block;
+        width: 100%;
+        min-width: auto;
+        text-align: center;
+        margin: 20px auto;
+    }
+
+    form #buttonAdd {
+        margin-left: 0;
+    }
+
+    #mail {
+        margin: 0 5px;
+    }
+
+    .accounts-container {
+        padding: 2px 6px;
+    }
+
+    #eventMail {
+        width: 200px;
+    }
+
+    .form-main-accounts {
+        align-items: center;
+        justify-content: normal;
+    }
+
+    label {
+        font-weight: normal;
+    }
+
+    input[type="button"] {
+        padding: 6px;
+        margin-left: 6px;
+    }
+
+    #eventsContainer {
+        width: 100%;
+        padding: 2px 6px;
+        min-width: auto;
+    }
+
+    .form-title {
+        font-size: 18px;
+    }
+
+    #eventDate {
+        width: 22%;
+        margin: 0 5px 0 25px;
+    }
+
+    .form-main-accounts {
+        padding: 10px 0;
+    }
+
+    .form-main-accounts p {
+        font-size: 14px;
+    }
+
+    .event {
+        font-size: 14px;
+        padding: 3px;
+    }
+
+    .event .days {
+        width: 30px;
+    }
+
+    .event .days .days-number {
+        font-size: 16px;
+    }
+
+    .days-text span {
+        display: none;
+    }
+
+    .days-text:after {
+        content: 'hrs';
+    }
+
+    .timer-part {
+        font-size: 16px;
+        bottom: 10px;
+    }
+
+    .minutes .minutes-number {
+        font-size: 16px;
+        margin: 0;
+    }
+
+    .event .event-mail {
+        width: 230px;
+    }
+
+    .event-date {
+        display: none;
+    }
+
+    .event .actions {
+        padding: 8px 0;
+    }
+
+    .bDelete {
+        padding: 6px;
+    }
+}
+
+@media (max-width: 360px) {
+    #mail {
+        width: 180px;
+    }
 }

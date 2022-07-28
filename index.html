@@ -8,20 +8,29 @@
     <title>Dias Faltantes</title>
 </head>
 <body>
-    <div id="app">
-        <div class="form">
+    <div id="signup-response">Se ha agregado correctamente!</div>
+    
+        <div class="form-action">
             <form action="">
                 <label for="correo">Correo: </label>
-                <input type="email" name="correo "placeholder="Introduzca su correo" id="eventMail">
-                <label for="fecha">Día que compró: </label>
-                <input type="datetime-local" id="eventDate">
-                <input type="button" id="bAdd" value="Añadir correo">
+                <input type="email" name="correo "placeholder="Introduzca su correo" id="mail">
+                <input type="button" id="buttonAdd" value="Añadir correo">
+            </form>
+        </div>
+        
+    <div id="app">
+        <div class="form">
+            <h1 class="form-title">Cuentas Disponibles: </h1>
+            <form action="" class="accounts-container" id="accounts-list">
+                
             </form>
         </div>
 
-        <div id="eventsContainer"></div>
+        <div class="form">
+            <h1 class="form-title">Cuentas no disponibles: </h1>
+            <div id="eventsContainer"></div>
+        </div>
     </div>
-    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
-    <script src="main.js"></script>
+    <script src="main.js"></script> 
 </body>
 </html>
