@@ -278,6 +278,7 @@ input[type="button"] {
         width: 100%;
         padding: 2px 6px;
         min-width: auto;
+        margin-bottom: 20px;
     }
 
     .form-title {
