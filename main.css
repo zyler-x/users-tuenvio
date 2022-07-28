@@ -256,6 +256,10 @@ input[type="button"] {
         padding: 2px 6px;
     }
 
+    #eventMail {
+        width: 200px;
+    }
+
     .form-main-accounts {
         align-items: center;
         justify-content: normal;
